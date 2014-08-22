@@ -3,12 +3,12 @@
 body{
 	margin:0;
 	padding:0;
-	background:url(../images/bg.gif) 0 0 repeat #f7f5f5;
 	color:#333;
-	font-family:Cambria, Georgia, serif;
+	font-family:"Nanum_Gothic";
 	font-size:15px;
-	overflow-x:hidden;
+	
 }
+
 header, section, footer, hgroup{
 	display:block;
 }
@@ -164,18 +164,31 @@ a:hover, a:active{
 /*여기까지 기존에 있던 라이브러리 css*/
 /* 실제 css 시작*/
 /*HEADER START*/
-.header_container{
-	background-repeat: no-repeat;
-	background-image: url("../images/header_image.jpg");
-	background-size: cover;
-}
-body {
-	background-color: white;
-}
+/*BACK GROUND IMAGE*/
+.background-image {
+  position: fixed;
+  left: 0;
+  right:0;
+  z-index: -9999;
+  
+  display: block;
+  background: url('../images/header_image.jpg') no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+  width: 100%;
+  height: 100%;
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+}	
+/*BACK GROUND IMAGE END*/
 .container_all {
     font-family: 'Nanum_Gothic';
 
-	background-color: white;
 
 
 }

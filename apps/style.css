@@ -11,10 +11,15 @@
 body{
 	margin:0;
 	padding:0;
-	background:url(bg.gif) 0 0 repeat #f7f5f5;
 	color:#333;
-	font-family:Cambria, Georgia, serif;
+	font-family:"Nanum_Gothic";
 	font-size:15px;
+	background: url(../images/header_image.jpg) no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+
 }
 header, section, footer{
 	display:block;
