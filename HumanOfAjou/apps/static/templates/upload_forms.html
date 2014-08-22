@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>BlocksIt.js Demonstration #2 - Pinterest Dynamic Grid Layout with CSS3 Transitions</title>
+	<meta name="description" content="BlocksIt.js jQuery plugin Demonstration #2 Pinterest dynamic grid with CSS3 Transitions by inWebson.com"/>
+	<meta name="keywords" content="demonstration,demo,jquery,blocksit.js,css3,dynamic,grid,layout,inwebson"/>
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<!-- from this is Blocksit library -->
+	<!-- start with flat_UI -->
+	<script src="../js/jquery-ui.js"></script>
+	<!-- start with bootstrap -->
+	<script src="../js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/flat-ui.css">
+
+<!--[if lt IE 9]>
+<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<script src="../js/blocksit.min.js"></script>
+<link rel='stylesheet' href='../css/style.css' media='screen' />
+
+<!-- responsive web -->
+<script>
+$(document).ready(function() {
+	//vendor script
+	$('#header')
+	.css({ 'top':-50 })
+	.delay(1000)
+	.animate({'top': 0}, 800);
+	
+	$('#footer')
+	.css({ 'bottom':-15 })
+	.delay(1000)
+	.animate({'bottom': 0}, 800);
+	
+	//blocksit define
+	$(window).load( function() {
+		$('#container').BlocksIt({
+			numOfCol: 3,
+			offsetX: 1,
+			offsetY: 8
+		});
+	});
+	
+	//window resize
+	var currentWidth = 1100;
+	$(window).resize(function() {
+		var winWidth = $(window).width();
+		var conWidth;
+		if(winWidth< 650){
+			conWidth = 300;
+			col=1
+		}
+		else if(winWidth < 1100) {
+			conWidth = 600;
+			col = 2
+		} else if(winWidth > 1100) {
+			conWidth = 1100;
+			col = 3
+		}
+		
+		if(conWidth != currentWidth) {
+			currentWidth = conWidth;
+			$('#container').width(conWidth);
+			$('#container').BlocksIt({
+				numOfCol: col,
+				offsetX: 1,
+				offsetY: 8
+			});
+		}
+	});
+});
+
+</script>
+<!-- responsive app end -->
+<link rel="shortcut icon" href="http://www.inwebson.com/wp-content/themes/inwebson2/favicon.ico" />
+<link rel="canonical" href="http://www.inwebson.com/demo/blocksit-js/demo2/" />
+</head>
+
+
+<body>
+	<div class="upload_form">
+		<form role="form">
+			<div class="form-group">
+				<label for="exampleInput">이름</label>
+				<input type="text" class="form-control" placeholder="이름">
+			</div>
+			<div class="form-group">
+				<label for="exampleInput">닉네임</label>
+				<input type="text" class="form-control" placeholder="닉네임">
+			</div>
+			<div class="form-group">
+				<label for="exampleInputFile">파일 올리기</label>
+				<input type="file" id="exampleInputFile">
+				<p class="help-block">본인이 찍은 사진이나 동영상을 올려주세요.</p>
+			</div>
+			<div class="form-group">
+				<label for="exampleInput">찍은 위치</label>
+				<input type="text" class="form-control" placeholder="찍은 위치">
+			</div>
+			<div class="form-group">
+				<label for="exampleInput">내용</label>
+				<textarea class="form-control" rows="3"></textarea>
+			</div>
+			<div class="checkbox">
+				<label>
+					<input type="checkbox"> Check me out
+				</label>
+			</div>
+			<button type="submit" class="btn btn-default">Submit</button>
+		</form>
+	</div>
+</body>
+</html>

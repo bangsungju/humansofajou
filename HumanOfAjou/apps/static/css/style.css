@@ -1,4 +1,4 @@
-
+﻿
 /*여기부터 기존에 있던 라이브러리 css*/
 body{
 	margin:0;
@@ -281,6 +281,76 @@ width: 100%;
 	float:right;
 	width:120px;
 	height:44px;
+}
+
+/*THIS IS EPILOGUE*/
+#epilogue_list{
+	position:relative;
+	width:1100px;
+	margin:0 auto 25px;
+	padding-bottom: 10px;
+}
+.epilogue_title{
+	width: 100%;
+	border-bottom: 2px solid #363636;
+	font-family: 돋움,Dotum,굴림,Gullim,Helvetica,sans-serif;
+	font-size: 20px;
+	font-weight: bolder;
+}
+.board{
+	width: 95%;
+	height: 120px;
+	margin:0 auto 25px;
+	border-bottom: 1px solid #bcbcbc;
+}
+.report_date{
+	width: 10%;
+	margin: 0 auto;
+	float: left;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	text-align: center;
+}
+.month{
+	display: block;
+	margin: 0 auto;
+	font: 12px Tahoma,Helvetica,sans-serif;
+	color: #666;
+}
+.day{
+	margin: 0 auto;
+	font: 24px Tahoma,Helvetica,sans-serif;
+	color: #222;
+	font-weight: bold;
+}
+.reporter_line{
+	width: 90%;
+	float: left;
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+.thumb{
+	width: 52px;
+	float: left;
+}
+.name{
+	margin-top: -5px;
+	margin-left: 60px;
+	font-family: '나눔고딕',NanumGothic,'돋움',Dotum,Helvetica,AppleSDGothicNeo-Medium,AppleGothic,sans-serif;
+	font-size: 15px;
+	font-weight: bolder;
+}
+.aticle_name{
+	margin-left: 60px;
+	font-family: '나눔고딕',NanumGothic,'돋움',Dotum,Helvetica,AppleSDGothicNeo-Medium,AppleGothic,sans-serif;
+	font-size: 20px;
+	font-weight: bolder;
+}
+
+/*UPLOAD FORM*/
+.upload_form{
+	width: 80%;
+	margin:0 auto;
 }
 
 /*BODY 끝*/
