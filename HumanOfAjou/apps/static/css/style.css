@@ -179,12 +179,17 @@ a:hover, a:active{
         background-size: cover;
   width: 100%;
   height: 100%;
-  -webkit-filter: blur(20px);
-  -moz-filter: blur(5px);
-  -o-filter: blur(5px);
-  -ms-filter: blur(5px);
-  filter: blur(5px);
+  
 }	
+.Header_container{
+	height:707px;
+}
+/*Nav_bar*/
+#Header_nav_bar{
+	z-index:99;
+}
+/*Nav-bar-end*/
+
 /*BACK GROUND IMAGE END*/
 .container_all {
     font-family: 'Nanum_Gothic';
