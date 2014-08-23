@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>BlocksIt.js Demonstration #2 - Pinterest Dynamic Grid Layout with CSS3 Transitions</title>
+	<meta name="description" content="BlocksIt.js jQuery plugin Demonstration #2 Pinterest dynamic grid with CSS3 Transitions by inWebson.com"/>
+	<meta name="keywords" content="demonstration,demo,jquery,blocksit.js,css3,dynamic,grid,layout,inwebson"/>
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<!-- from this is Blocksit library -->
+	<!-- start with flat_UI -->
+	<script src="../js/jquery-ui.js"></script>
+
+	<!-- start with bootstrap -->
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/flat-ui.css">
+
+<!--[if lt IE 9]>
+<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<script src="../js/blocksit.min.js"></script>
+<script src="../js/bootstrap.js"></script>
+<link rel='stylesheet' href='../css/style.css' media='screen' />
+
+<!-- responsive web -->
+<script>
+$(document).ready(function() {
+	//vendor script
+	$('#header')
+	.css({ 'top':-50 })
+	.delay(1000)
+	.animate({'top': 0}, 800);
+	
+	$('#footer')
+	.css({ 'bottom':-15 })
+	.delay(1000)
+	.animate({'bottom': 0}, 800);
+	
+	//blocksit define
+	$(window).load( function() {
+		$('#container').BlocksIt({
+			numOfCol: 3,
+			offsetX: 1,
+			offsetY: 8
+		});
+	});
+	
+	//window resize
+	var currentWidth = 1100;
+	$(window).resize(function() {
+		var winWidth = $(window).width();
+		var conWidth;
+		if(winWidth< 650){
+			conWidth = 300;
+			col=1
+		}
+		else if(winWidth < 1100) {
+			conWidth = 600;
+			col = 2
+		} else if(winWidth > 1100) {
+			conWidth = 1100;
+			col = 3
+		}
+		
+		if(conWidth != currentWidth) {
+			currentWidth = conWidth;
+			$('#container').width(conWidth);
+			$('#container').BlocksIt({
+				numOfCol: col,
+				offsetX: 1,
+				offsetY: 8
+			});
+		}
+	});
+});
+
+</script>
+<!-- responsive app end -->
+<link rel="shortcut icon" href="http://www.inwebson.com/wp-content/themes/inwebson2/favicon.ico" />
+<link rel="canonical" href="http://www.inwebson.com/demo/blocksit-js/demo2/" />
+</head>
+
+
+<body>
+	<!-- Header -->
+	<div class="background-image"></div> <!-- dealing background image -->
+	<div class = "container_all">
+		<header class = "header_container">
+			
+			<div class="MainTitle">
+				<div class="Logo_area">
+					<div class="Logo_img">
+						<img src = "../images/4.png"/>
+					</div>
+					<div class="FacebookLike">
+					</div>
+					<div class="FacebookLink">
+						<div class="Facebook_div">
+							<p class="LinkFacebook">FIND US IN FACEBOOK</p>
+						</div>
+
+					</div>
+				</div>
+
+			</div>
+			
+		</header>
+		<div class = "Header_nav_bar">
+			<nav class="navbar navbar-default humans-navbar" role="navigation">
+				<!-- <div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-01">
+						<span class="sr-only">Toggle navigation</span>
+					</button>
+					<img src ="../images/humans_logo_ver.png" height="47px"/>
+				</div> -->
+				<div class="collapse navbar-collapse" id="navbar-collapse-01">
+					<ul class="nav navbar-nav">           
+						<li><a href="#">ABOUT US</a></li>
+						<li class="active"><a href="#">HUMANS</a></li>
+						<li><a href="#">AJOU</a></li>
+						<li><a href="#">EPILOGUE</a></li>
+					</ul>           
+					<form class="navbar-form navbar-right" action="#" role="search">
+						<div class="form-group">
+							<div class="input-group">
+								<input class="form-control" id="navbarInput-01" type="search" placeholder="Search">
+								<span class="input-group-btn">
+									<button type="submit" class="btn"><span class="fui-search"></span></button>
+								</span>            
+							</div>
+						</div>               
+					</form>
+				</div><!-- /.navbar-collapse -->
+			</nav><!-- /navbar -->
+		</div>
+		
+		<!-- Content -->
+		<!-- Humans-Detail Content -->
+		<div class = "Detail_Container">
+
+
+			<div class ="Humans_detail">
+				<!-- humans picture area -->
+				<div class ="Humans_detail_img_area">
+				</div>
+				<!-- text1(interview) area -->
+				<div class ="Humans_detail_text1_area">
+				</div>
+				<!-- text2(Q/A per month) area -->
+				<div class ="Humans_detail_text2_area">
+				</div>
+
+			</div>
+		</div>
+		<!-- /Humans-Detail Content -->
+		<!-- Footer -->
+		<!-- <footer id="footer">
+			<span>&copy; 2012 <a href="http://www.inwebson.com">HumansofAjouUniv.com</a>. Design by <a href="http://www.inwebson.com/contactus">BANGSUNGJU</a>. </span>
+		</footer> -->
+	</div>
+</body>
+</html>
