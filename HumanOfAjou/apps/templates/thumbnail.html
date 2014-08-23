@@ -1,79 +1,227 @@
-<!doctype html>
-<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
-<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
-<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<!DOCTYPE html>
+<html>
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta charset="utf-8">
+	<title>BlocksIt.js Demonstration #2 - Pinterest Dynamic Grid Layout with CSS3 Transitions</title>
+	<meta name="description" content="BlocksIt.js jQuery plugin Demonstration #2 Pinterest dynamic grid with CSS3 Transitions by inWebson.com"/>
+	<meta name="keywords" content="demonstration,demo,jquery,blocksit.js,css3,dynamic,grid,layout,inwebson"/>
 
-  <title>jQuery Wookmark Plug-in Example</title>
-  <meta name="description" content="An very basic example of how to use the Wookmark jQuery plug-in.">
-  <meta name="author" content="Christoph Ono, Sebastian Helzle">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<!-- from this is Blocksit library -->
+	<!-- start with flat_UI -->
+	<script src="../static/js/jquery-ui.js"></script>
+	<script src="../static/js/style.js"></script>
 
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+	<!-- start with bootstrap -->
+	<link rel="stylesheet" type="text/css" href="../static/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../static/css/flat-ui.css">
 
-  <!-- CSS Reset -->
-  <link rel="stylesheet" href="../css/thumbnail_css/reset.css">
+<!--[if lt IE 9]>
+<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<script src="../static/js/blocksit.min.js"></script>
+<script src="../static/js/bootstrap.js"></script>
+<link rel='stylesheet' href='../static/css/style.css' media='screen' />
 
-  <!-- Magnific popup styles -->
-  <link rel="stylesheet" href="../css/thumbnail_css/magnific-popup.css">
 
-  <!-- Global CSS for the page and tiles -->
-  <link rel="stylesheet" href="../css/thumbnail_css/main.css">
+<!-- responsive web -->
+<script>
+$(document).ready(function() {
+	//vendor script
+	$('#header')
+	.css({ 'top':-50 })
+	.delay(1000)
+	.animate({'top': 0}, 800);
+	
+	$('#footer')
+	.css({ 'bottom':-15 })
+	.delay(1000)
+	.animate({'bottom': 0}, 800);
+	
+	//blocksit define
+	$(window).load( function() {
+		$('#container').BlocksIt({
+			numOfCol: 5,
+			offsetX: 4,
+			offsetY: 4
+		});
+	});
+	
+	//window resize
+	var currentWidth = 1100;
+	$(window).resize(function() {
+		var winWidth = $(window).width();
+		var conWidth;
+		if(winWidth < 660) {
+			conWidth = 440;
+			col = 2
+		} else if(winWidth < 880) {
+			conWidth = 660;
+			col = 3
+		} else if(winWidth < 1100) {
+			conWidth = 880;
+			col = 4;
+		} else {
+			conWidth = 1100;
+			col = 5;
+		}
+		
+		if(conWidth != currentWidth) {
+			currentWidth = conWidth;
+			$('#container').width(conWidth);
+			$('#container').BlocksIt({
+				numOfCol: col,
+				offsetX: 4,
+				offsetY: 4
+			});
+		}
+	});
+});
 
+</script>
+<!-- responsive app end -->
+<link rel="shortcut icon" href="http://www.inwebson.com/wp-content/themes/inwebson2/favicon.ico" />
+<link rel="canonical" href="http://www.inwebson.com/demo/blocksit-js/demo2/" />
 </head>
 
+
 <body>
+	<!-- Header -->
+	<div class="background-image" id ="background-image"></div> <!-- dealing background image -->
+	<div class = "container_all">
+		<header class = "Header_container">
+			
+			<div class="MainTitle">
+				<div class="Logo_area">
+					<div class="Logo_img">
+						<img src = "../static/images/4.png"/>
+					</div>
+					<div class="FacebookLike">
+					</div>
+					<div class="FacebookLink">
+						<div class="Facebook_div">
+							<p class="LinkFacebook">FIND US IN FACEBOOK</p>
+						</div>
 
-  <div id="container">
-    <header>
-      <h1>jQuery Wookmark Plug-in Example</h1>
-      <p>Click an item to open the display image in a lightbox.</p>
-    </header>
-    <div id="main" role="main">
+					</div>
+				</div>
 
-      <ul id="tiles">
-        <!-- These are our grid blocks -->
-        <li>
-          <a href="..images/thumbnail_sample_images/image_1_big.jpg" rel="lightbox">
-            <img src="..images/thumbnail_sample_images/image_1.jpg" width="200" height="283">
-          </a>
-          <p>1</p>
-        </li>
-        <li>
-          <a href="..images/thumbnail_sample_images/image_2_big.jpg" rel="lightbox">
-            <img src="..images/thumbnail_sample_images/image_2.jpg" width="200" height="300">
-          </a>
-          <p>2</p>
-        </li>
-        <li>
-          <a href="..images/thumbnail_sample_images/image_3_big.jpg" rel="lightbox">
-            <img src="..images/thumbnail_sample_images/image_3.jpg" width="200" height="252">
-          </a>
-          <p>3</p>
-        </li>
-        <li>
-          <a href="..images/thumbnail_sample_images/image_4_big.jpg" rel="lightbox">
-            <img src="..images/thumbnail_sample_images/image_4.jpg" width="200" height="158">
-          </a>
-          <p>4</p>
-        </li>
-        <li>
-          <a href="..images/thumbnail_sample_images/image_5_big.jpg" rel="lightbox">
-            <img src="..images/thumbnail_sample_images/image_5.jpg" width="200" height="300">
-          </a>
-          <p>5</p>
-        </li>
-        
-        <!-- End of grid blocks -->
-      </ul>
+			</div>
+			
+		</header>
+		<div class = "Header_nav_bar" id = "Header_nav_bar">
+			<nav class="navbar navbar-default  humans-navbar" role="navigation">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-01">
+						<span class="sr-only">Toggle navigation</span>
+					</button>
+					<img src ="../static/images/humans_logo_ver.png" height="47px"/>
+				</div>
+				<div class="collapse navbar-collapse" id="navbar-collapse-01">
+					<ul class="nav navbar-nav">           
+						<li><a href="#">ABOUT US</a></li>
+						<li class="active"><a href="#">HUMANS</a></li>
+						<li><a href="#">AJOU</a></li>
+						<li><a href="#">EPILOGUE</a></li>
+					</ul>           
+					<form class="navbar-form navbar-right" action="#" role="search">
+						<div class="form-group">
+							<div class="input-group">
+								<input class="form-control" id="navbarInput-01" type="search" placeholder="Search">
+								<span class="input-group-btn">
+									<button type="submit" class="btn"><span class="fui-search"></span></button>
+								</span>            
+							</div>
+						</div>               
+					</form>
+				</div><!-- /.navbar-collapse -->
+			</nav><!-- /navbar -->
+		</div>
+		<!--introducing ajou sec -->
+		
+		<!-- THIS IS CATEGORY -->
+		<div class = "contents_category_bsj" >
+			<div class = "drop_box_location">
 
-    </div>
-  </div>
+				<div class="dropdown" id="contents_drop_down_position">
+					<button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Categorys<span class="caret"></span></button>
+					<span class="dropdown-arrow"></span>
+					<ul class="dropdown-menu">
+						<li><a href="#fakelink">Date Listed</a></li>
+						<li><a href="#fakelink">Thumnails</a></li>
+					</ul>
+				</div>
+				
+			</div>
+		</div>
+		<!-- END CATEGORY -->
+		<!-- Content -->
+		<section id="wrapper">
 
-  <script type="text/javascript" data-main="app" src="../js/thumbnail_js/require.min.js"></script>
-  <script type="text/javascript" src="app.js"></script>
+			<div id="container">
+				<div class="grid" id="thumnail_grid">
+					<div class="imgholder">
+						<img src="http://www.inwebson.com/demo/blocksit-js/demo2/images/img27.jpg" />
+					</div>
 
-</body>
-</html>
+				</div>
+				<div class="grid" id="thumnail_grid">
+					<div class="imgholder">
+						<img src="http://www.inwebson.com/demo/blocksit-js/demo2/images/img26.jpg" />
+					</div>
+
+				</div>
+				<div class="grid" id="thumnail_grid">
+					<div class="imgholder">
+						<img src="http://www.inwebson.com/demo/blocksit-js/demo2/images/img15.jpg" />
+					</div>
+				</div>
+				<div class="grid" id="thumnail_grid">
+					<div class="imgholder">
+						<img src="http://www.inwebson.com/demo/blocksit-js/demo2/images/img23.jpg" />
+					</div>
+				</div>
+				<div class="grid" id="thumnail_grid">
+					<div class="imgholder">
+						<img src="http://www.inwebson.com/demo/blocksit-js/demo2/images/img17.jpg" />
+					</div>
+				</div>
+				<div class="grid" id="thumnail_grid">
+					<div class="imgholder">
+						<img src="http://www.inwebson.com/demo/blocksit-js/demo2/images/img22.jpg" />
+					</div>
+				</div>
+				<div class="grid" id="thumnail_grid">
+					<div class="imgholder">
+						<img src="http://www.inwebson.com/demo/blocksit-js/demo2/images/img16.jpg" />
+					</div>
+				</div>
+				<div class="grid" id="thumnail_grid">
+					<div class="imgholder">
+						<img src="http://www.inwebson.com/demo/blocksit-js/demo2/images/img21.jpg" />
+					</div>
+				</div>
+				<div class="grid" id="thumnail_grid">
+					<div class="imgholder">
+						<img src="http://www.inwebson.com/demo/blocksit-js/demo2/images/img28.jpg" />
+					</div>
+				</div>
+				<div class="grid" id="thumnail_grid">
+					<div class="imgholder">
+						<img src="http://www.inwebson.com/demo/blocksit-js/demo2/images/img2.jpg" />
+					</div>
+				</div>
+				<div class="grid" id="thumnail_grid">
+					<div class="imgholder">
+						<img src="http://www.inwebson.com/demo/blocksit-js/demo2/images/img24.jpg" />
+					</div>
+				</div>
+
+			</section>
+			<!-- Footer -->
+			<footer id="footer">
+				<span>&copy; 2012 <a href="http://www.inwebson.com">HumansofAjouUniv.com</a>. Design by <a href="http://www.inwebson.com/contactus">BANGSUNGJU</a>. </span>
+			</footer>
+		</div>
+	</body>
+	</html>

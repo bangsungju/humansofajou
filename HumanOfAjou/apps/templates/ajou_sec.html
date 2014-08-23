@@ -9,16 +9,20 @@
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 	<!-- from this is Blocksit library -->
 	<!-- start with flat_UI -->
-	<script src="../js/jquery-ui.js"></script>
+	<script src="../static/js/jquery-ui.js"></script>
+	<script src="../static/js/style.js"></script>
+
 	<!-- start with bootstrap -->
-	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="../css/flat-ui.css">
+	<link rel="stylesheet" type="text/css" href="../static/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../static/css/flat-ui.css">
 
 <!--[if lt IE 9]>
 <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
-<script src="../js/blocksit.min.js"></script>
-<link rel='stylesheet' href='../css/style.css' media='screen' />
+<script src="../static/js/blocksit.min.js"></script>
+<script src="../static/js/bootstrap.js"></script>
+<link rel='stylesheet' href='../static/css/style.css' media='screen' />
+<link rel='stylesheet' href='../static/css/ajou.css' media='screen' />
 
 <!-- responsive web -->
 <script>
@@ -81,13 +85,14 @@ $(document).ready(function() {
 
 <body>
 	<!-- Header -->
+	<div class="background-image" id ="background-image"></div> <!-- dealing background image -->
 	<div class = "container_all">
-		<header class = "header_container">
+		<header class = "Header_container">
 			
 			<div class="MainTitle">
 				<div class="Logo_area">
 					<div class="Logo_img">
-						<img src = "../images/humans_logo_hor.png"/>
+						<img src = "../static/images/4.png"/>
 					</div>
 					<div class="FacebookLike">
 					</div>
@@ -102,19 +107,19 @@ $(document).ready(function() {
 			</div>
 			
 		</header>
-		<div class = "Header_nav_bar">
-			<nav class="navbar navbar-default" role="navigation">
+		<div class = "Header_nav_bar" id = "Header_nav_bar">
+			<nav class="navbar navbar-default  humans-navbar" role="navigation">
 				<div class="navbar-header">
 					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-01">
 						<span class="sr-only">Toggle navigation</span>
 					</button>
-					<img src ="../images/humans_logo_ver.png" height="47px"/>
+					<img src ="../static/images/humans_logo_ver.png" height="47px"/>
 				</div>
 				<div class="collapse navbar-collapse" id="navbar-collapse-01">
 					<ul class="nav navbar-nav">           
 						<li><a href="#">ABOUT US</a></li>
-						<li ><a href="#">HUMANS</a></li>
-						<li class="active"><a href="#">AJOU</a></li>
+						<li class="active"><a href="#">HUMANS</a></li>
+						<li><a href="#">AJOU</a></li>
 						<li><a href="#">EPILOGUE</a></li>
 					</ul>           
 					<form class="navbar-form navbar-right" action="#" role="search">
@@ -130,13 +135,19 @@ $(document).ready(function() {
 				</div><!-- /.navbar-collapse -->
 			</nav><!-- /navbar -->
 		</div>
-		<div class = "Picture_upload">
-			<div class = "Picture_upload_contents">
-				
-				<p style = "font-size:15px">메뉴 "아주"는 여러분들이 만들어 가는 칸입니다. 아주대의 멋진 풍경과 함께 아우 배고프다 얘들아 뭐 먹을 거없니, 오늘 커피만 4잔을 마셨더니 밤에도 정신이 말똥해서 내 적적한 마음을 달래줄 이가 이놈밖에 없어 아직도 이놈을 붙잡고 만들고 있다
-				</p>
-				<button class="btn btn-warning" id="picture_upload_button_size_up">사진올리기</button>
+		<div class ="Ajou_text_area">
+
+			<div class ="Ajou_text">
+				<h6>"휴먼오브아주"" 의 아주섹션은... </h6>
+				<div style = "width:100%;border-bottom: 2px solid gray;margin-bottom:10px;"></div>
+				<p style="color:gray;font-color:gray;font-size:15px">"아주"섹션은 여러분들과 함께 만들어가는 공간입니다.
+
+				이 공간은 여러분들이 제보한 소중한 사진들이 올라가는 공간이며, 메인 사진으로 선정이 되면 여러 혜택과 함께 일정기간동안 HUMANS OF AJOU UNIV 의 메인을 차지하게 됩니다.
+
+				아주대에 관한 모든 풍경, 인물, 건물 사진등 어떤 사진이던지 올려주세요! </p>			
+				<button class="btn btn-warning">사진올리기</button>
 			</div>
+
 		</div>
 		<!-- THIS IS CATEGORY -->
 		<div class = "contents_category_bsj" >
@@ -163,7 +174,7 @@ $(document).ready(function() {
 			<div id="container">
 				<div class="grid">
 					<div class="imgholder">
-						<img src="../images/img1.jpg" />
+						<img src="../static/images/img1.jpg" />
 					</div>
 					<div class="grid_contents">
 						<p>“When I was 12 years old, a missionary saw me and suggested that I learn how to do flower arrangements. I said, ‘Dudes don’t do things like flower arrangements’. The missionary then said, ‘In life, there’s a difference between choosing not to do something because you don’t know it and being knowledgeable about something and then choosing not to do it.’ My view completely changed after he said this. So I learned how to do flower arrangements as well as some other things, but in the end I ended up choosing to run my own flower shop. 30 years have passed since that moment.”
@@ -175,7 +186,7 @@ $(document).ready(function() {
 				</div>
 				<div class="grid">
 					<div class="imgholder">
-						<img src="../images/img5.jpg" />
+						<img src="../static/images/img5.jpg" />
 					</div>
 					<div class="grid_contents">
 						<p>
@@ -190,7 +201,7 @@ $(document).ready(function() {
 				</div>
 				<div class="grid">
 					<div class="imgholder">
-						<img src="../images/img8.jpg" />
+						<img src="../static/images/img8.jpg" />
 					</div>
 					<div class="grid_contents">
 						<p>“My least favorite thing is soju. Once I start to drink it, I always seem to drink too much” 
@@ -200,7 +211,7 @@ $(document).ready(function() {
 				</div>
 				<div class="grid">
 					<div class="imgholder">
-						<img src="../images/img2.jpg" />
+						<img src="../static/images/img2.jpg" />
 					</div>
 					<div class="grid_contents">
 						<p>Today’s microfashion show 

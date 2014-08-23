@@ -1,0 +1,16 @@
+.Ajou_text_area{
+	height: 300px;
+	position:relative;
+
+}
+.Ajou_text{
+	height: 250px;
+	width: 77%;
+	margin : auto;
+	background-color: white;
+	padding: 15px;
+	border-radius: 8px;
+	border-style: solid;
+	border-color: white;
+
+}
