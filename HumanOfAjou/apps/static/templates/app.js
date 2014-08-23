@@ -1,9 +1,9 @@
 requirejs.config({
   "paths": {
-    "jquery": "../libs/jquery.min",
-    "imagesLoaded": "../libs/jquery.imagesloaded",
-    "wookmark": "../jquery.wookmark",
-    "magnificPopup": "../libs/jquery.magnific-popup.min"
+    "jquery": "../js/thumbnail_js/jquery.min",
+    "imagesLoaded": "../js/thumbnail_js/jquery.imagesloaded",
+    "wookmark": "../js/thumbnail_js/jquery.wookmark",
+    "magnificPopup": "../js/thumbnail_js/fjquery.magnific-popup.min"
   },
   "shim": {
     "magnificPopup": ["jquery"],
