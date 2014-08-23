@@ -1,20 +1,21 @@
-application: osh-personal-project
-version: 0-0-2-proto
+application: sublime-lambda-680
+version: 0-0-1
 runtime: python27
 api_version: 1
 threadsafe: yes
 
-### builtins: import appengine native builtin services ###
+## builtins: import appengine native builtin services ###
 builtins:
 - appstats: on
 - admin_redirect: on
 - deferred: on
 - remote_api: on
 
-### handlers: set script or static files by url pattern ###
+## handlers: set script or static files by url pattern ###
 handlers:
 - url: /static
   static_dir: apps/static
+  mime_type: application/octet-stream
 
 - url: .*
   script: apps.app

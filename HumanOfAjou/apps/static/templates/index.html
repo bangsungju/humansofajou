@@ -116,10 +116,10 @@ $(document).ready(function() {
 				<div class="collapse navbar-collapse" id="navbar-collapse-01">
 					<ul class="nav navbar-nav">           
 						<li><a href="#">ABOUT US</a></li>
-						<li class="active"><a href="#">HUMANS</a></li>
-						<li><a href="#">AJOU</a></li>
+						<li{% if active_tab == 'humans_tab' %} class="active"{% endif %}><a href="{{ url_for('humans_list') }}">HUMANS</a></li>
+						<li{% if active_tab == 'ajou_tab' %} class="active"{% endif %}><a href="{{ url_for('ajou_list') }}">AJOU</a></li>
 						<li><a href="#">EPILOGUE</a></li>
-					</ul>           
+					</ul>
 					<form class="navbar-form navbar-right" action="#" role="search">
 						<div class="form-group">
 							<div class="input-group">
@@ -133,7 +133,7 @@ $(document).ready(function() {
 				</div><!-- /.navbar-collapse -->
 			</nav><!-- /navbar -->
 		</div>
-		<!-- THIS IS CATEGORY -->
+		<!-- THIS IS CATORY -->
 		<div class = "contents_category_bsj" >
 			<div class = "drop_box_location">
 			
@@ -205,7 +205,7 @@ $(document).ready(function() {
 				</div>
 				<div class="grid">
 					<div class="imgholder">
-						<img src="http://www.inwebson.com/demo/blocksit-js/demo2/images/img17.jpg" />
+						<img src="#" />
 					</div>
 					<div class="grid_contents">
 						<p>The only shinning light...</p>
@@ -213,7 +213,7 @@ $(document).ready(function() {
 				</div>
 				<div class="grid">
 					<div class="imgholder">
-						<img src="http://www.inwebson.com/demo/blocksit-js/demo2/images/img22.jpg" />
+						<img src="#" />
 					</div>
 					<div class="grid_contents">
 						<p>Rooster's ranch landscape...</p>
@@ -221,7 +221,7 @@ $(document).ready(function() {
 				</div>
 				<div class="grid">
 					<div class="imgholder">
-						<img src="http://www.inwebson.com/demo/blocksit-js/demo2/images/img16.jpg" />
+						<img src="#" />
 					</div>
 					<div class="grid_contents">
 						<p>Sun shinning into forest...</p>
@@ -229,7 +229,7 @@ $(document).ready(function() {
 				</div>
 				<div class="grid">
 					<div class="imgholder">
-						<img src="http://www.inwebson.com/demo/blocksit-js/demo2/images/img21.jpg" />
+						<img src="#" />
 					</div>
 					<div class="grid_contents">
 						<p>It is yellow cloudy...</p>
@@ -237,7 +237,7 @@ $(document).ready(function() {
 				</div>
 				<div class="grid">
 					<div class="imgholder">
-						<img src="http://www.inwebson.com/demo/blocksit-js/demo2/images/img28.jpg" />
+						<img src="#" />
 					</div>
 					<div class="grid_contents">
 						<p>Just a herringfleet mill...</p>
@@ -245,7 +245,7 @@ $(document).ready(function() {
 				</div>
 				<div class="grid">
 					<div class="imgholder">
-						<img src="http://www.inwebson.com/demo/blocksit-js/demo2/images/img2.jpg" />
+						<img src="#" />
 					</div>
 					<div class="grid_contents">
 						<p>Battle Field for you...</p>
