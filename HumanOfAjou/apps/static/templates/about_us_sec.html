@@ -10,8 +10,8 @@
 	<!-- from this is Blocksit library -->
 	<!-- start with flat_UI -->
 	<script src="../js/jquery-ui.js"></script>
+
 	<!-- start with bootstrap -->
-	<script src="../js/bootstrap.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="../css/flat-ui.css">
 
@@ -19,6 +19,7 @@
 <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
 <script src="../js/blocksit.min.js"></script>
+<script src="../js/bootstrap.js"></script>
 <link rel='stylesheet' href='../css/style.css' media='screen' />
 
 <!-- responsive web -->
@@ -105,19 +106,19 @@ $(document).ready(function() {
 			
 		</header>
 		<div class = "Header_nav_bar">
-			<nav class="navbar navbar-default" role="navigation">
-				<div class="navbar-header">
+			<nav class="navbar navbar-default humans-navbar" role="navigation">
+				<!-- <div class="navbar-header">
 					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-01">
 						<span class="sr-only">Toggle navigation</span>
 					</button>
 					<img src ="../images/humans_logo_ver.png" height="47px"/>
-				</div>
+				</div> -->
 				<div class="collapse navbar-collapse" id="navbar-collapse-01">
 					<ul class="nav navbar-nav">           
 						<li><a href="#">ABOUT US</a></li>
-						<li><a href="#">HUMANS</a></li>
+						<li class="active"><a href="#">HUMANS</a></li>
 						<li><a href="#">AJOU</a></li>
-						<li class="active"><a href="#">EPILOGUE</a></li>
+						<li><a href="#">EPILOGUE</a></li>
 					</ul>           
 					<form class="navbar-form navbar-right" action="#" role="search">
 						<div class="form-group">
@@ -132,47 +133,57 @@ $(document).ready(function() {
 				</div><!-- /.navbar-collapse -->
 			</nav><!-- /navbar -->
 		</div>
-		<div id="epilogue_list">
-			<div class="epilogue_title">EPILOGUE</div>
-			<div class="board">
-				<div class="report_date">
-					<div class="month">2014.08</div>
-					<div class="day">21</div>
-				</div>
-				<div class="reporter_line">
-					<div class="thumb"><img src="../images/thumb1.jpg" class="thumb"></div>
-					<div class="name">Simheetwice</div>
-					<div class="aticle_name">여기가 칼럼 이름</div>
-				</div>
+		
+		<!-- Content -->
+		<!-- About Us Section Content -->
+		<div class = "AboutUs_Container">
+			<!-- AboutUs title -->
+			<div class = "AboutUs_title">
+				<h1><span>About Us</span></h1>				
 			</div>
-			<div class="board">
-				<div class="report_date">
-					<div class="month">2014.08</div>
-					<div class="day">21</div>
+
+			<div class = "AboutUs">
+				<div class ="AboutUs_img_area">
+					<div id = "AboutUs_img">
+					<img src="../images/aboutus_img.png">
+					</div>
 				</div>
-				<div class="reporter_line">
-					<div class="thumb"><img src="../images/thumb1.jpg" class="thumb"></div>
-					<div class="name">Simheetwice</div>
-					<div class="aticle_name">여기가 칼럼 이름</div>
+				<div class ="AboutUs_text_area">
+					<div class ="AboutUs_text">
+						휴먼스 오브 아주는
+						<br>우리 아주대학교 안에서 숨쉬고 있는 사람들을 담은 페이지이다.
+						<br>
+						<br>						
+						"평범하지만 결코 평범하지 않은 사람들."				
+						<br>
+						<br>
+						저희가 하고자 하는 역할은, 전 Humans 시리즈를 착안하여, 우리 아주대학교 구성원을 담아 어떤 사람들로 구성되어 있고, 어떤 모습들을 볼 수 있는 지 소개하고 공감하게 하는 역할입니다.			
+					</div>
 				</div>
+
 			</div>
-			<div class="board">
-				<div class="report_date">
-					<div class="month">2014.08</div>
-					<div class="day">21</div>
-				</div>
-				<div class="reporter_line">
-					<div class="thumb"><img src="../images/thumb1.jpg" class="thumb"></div>
-					<div class="name">Simheetwice</div>
-					<div class="aticle_name">여기가 칼럼 이름</div>
-				</div>
+
+
+			<!-- Members title -->
+
+			<div class = "Members_title">
+				<h1><span>Members</span></h1>여기는 휴먼 오브 아주 멤버를 소개하는 칸입니다.				
 			</div>
-			
-		</div>
+
+			<div class = "Members">
+				<div class ="Members_img_area">
+					<img id ="Mebers_img" src="../images/IMG_3229.jpg">
+				</div>				
+			</div>
+		</div><!-- /About Us Content -->
+
+
+
+
 		<!-- Footer -->
-		<footer id="footer">
+		<!-- <footer id="footer">
 			<span>&copy; 2012 <a href="http://www.inwebson.com">HumansofAjouUniv.com</a>. Design by <a href="http://www.inwebson.com/contactus">BANGSUNGJU</a>. </span>
-		</footer>
+		</footer> -->
 	</div>
 </body>
 </html>

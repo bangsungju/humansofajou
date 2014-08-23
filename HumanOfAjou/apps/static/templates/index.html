@@ -10,6 +10,7 @@
 	<!-- from this is Blocksit library -->
 	<!-- start with flat_UI -->
 	<script src="../js/jquery-ui.js"></script>
+	<script src="../js/style.js"></script>
 
 	<!-- start with bootstrap -->
 	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
@@ -83,9 +84,9 @@ $(document).ready(function() {
 
 <body>
 	<!-- Header -->
-	<div class="background-image"></div> <!-- dealing background image -->
+	<div class="background-image" id ="background-image"></div> <!-- dealing background image -->
 	<div class = "container_all">
-		<header class = "header_container">
+		<header class = "Header_container">
 			
 			<div class="MainTitle">
 				<div class="Logo_area">
@@ -105,8 +106,8 @@ $(document).ready(function() {
 			</div>
 			
 		</header>
-		<div class = "Header_nav_bar">
-			<nav class="navbar navbar-default" role="navigation">
+		<div class = "Header_nav_bar" id = "Header_nav_bar">
+			<nav class="navbar navbar-default  humans-navbar" role="navigation">
 				<div class="navbar-header">
 					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-01">
 						<span class="sr-only">Toggle navigation</span>
