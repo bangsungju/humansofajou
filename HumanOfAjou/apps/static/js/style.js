@@ -38,14 +38,14 @@ $( window ).bind( 'scroll', function(){
   if( srlTop > winHeight-53)
   {
     $( '#Header_nav_bar' ).css({ position :'fixed', top : '0px' ,right:'0px' ,left:'0px'});
-    $( '.Prev_Humans_detail').css({position:'fixed', top : '330px' ,left :'50px'});
-    $( '.Next_Humans_detail').css({position:'fixed', top : '330px' ,right:'50px'});
+    $( '.Prev_detail').css({position:'fixed', top : '330px' ,left :'50px'});
+    $( '.Next_detail').css({position:'fixed', top : '330px' ,right:'50px'});
   }
   else
   {
     $( '#Header_nav_bar' ).css({ position :'relative', top : '0px',right:'0px',left:'0px'});
-    $( '.Prev_Humans_detail').css({position:'relative'});
-    $( '.Next_Humans_detail').css({position:'relative'});
+    $( '.Prev_detail').css({position:'relative'});
+    $( '.Next_detail').css({position:'relative'});
   }
 });
 
