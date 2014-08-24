@@ -154,7 +154,7 @@ $(document).ready(function() {
 				<!-- humans picture area -->
 				<div class ="Humans_detail_img_area">
 					<div class ="Humans_detail_img">
-						<img class ="Humans_detail_img" src="../static/images/img1.jpg" />
+						<img class ="Humans_detail_img" data-toggle="modal" data-target=".human-modal" src="../static/images/img1.jpg" />
 					</div>			
 				</div>
 				<!-- text1(interview) area -->
@@ -183,7 +183,14 @@ $(document).ready(function() {
 					</div>
 				</div>
 			</div>
-
+			<!-- image modal -->
+			<div class="modal fade human-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+				<div class="modal-dialog modal-lg">
+					<div class="modal-content">
+						<img class ="Detail_img_modal" src="../static/images/img1.jpg" />
+					</div>
+				</div>
+			</div>
 		</div><!-- /Humans-Detail Content -->
 
 		<!-- Footer -->

@@ -154,7 +154,7 @@ $(document).ready(function() {
 				<!-- picture area -->
 				<div class ="Ajou_detail_img_area">
 					<div class ="Ajou_detail_img">
-						<img class ="Ajou_detail_img" src="../static/images/IMG_3229.jpg" />
+						<img class ="Ajou_detail_img" data-toggle="modal" data-target=".ajou-modal" src="../static/images/IMG_3229.jpg" />
 					</div>			
 				</div>
 				<!-- text1 area -->				
@@ -162,7 +162,14 @@ $(document).ready(function() {
 					Copyright 2014. WONDU all rights reserved. 
 				</div>
 			</div>
-
+			<!-- image modal -->
+			<div class="modal fade ajou-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+				<div class="modal-dialog modal-lg">
+					<div class="modal-content">
+					<img class ="Detail_img_modal" src="../static/images/IMG_3229.jpg" />
+					</div>
+				</div>
+			</div>
 		</div>
 
 		<!-- Footer -->
