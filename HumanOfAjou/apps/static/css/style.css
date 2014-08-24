@@ -239,7 +239,7 @@ a:hover, a:active{
 }
 
 .humans-navbar{
-	background-color: rgba(255,255,255,0.5);
+	background-color: rgba(255,255,255,0);
 
 }
 
@@ -468,5 +468,34 @@ width: 100%;
 /*About us 끝*/
 
 /*Humans-detail 시작*/
+.Detail_Container{
+	width: 100%;
+	height: 100vh;
+	margin: 0 auto;
+	border: solid black;
+	background-color: rgba(255,255,255,0.5);
 
+}
+
+/*.Prev_Humans_detail{
+	float:left;
+	width: 15%;	
+	height: 100%;
+	border: solid red;
+
+}
+.Next_Humans_detail{
+	float:left;
+	width: 15%;
+	height: 100%;
+	border: solid red;
+}
+.Humans_detail{
+	float: left;
+	width: 70%;
+	height: 100%;
+	margin: 0 auto;
+	border: solid blue;
+}
+*/
 /*Humans-detail 끝*/

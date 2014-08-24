@@ -21,6 +21,7 @@
 <script src="../js/blocksit.min.js"></script>
 <script src="../js/bootstrap.js"></script>
 <link rel='stylesheet' href='../css/style.css' media='screen' />
+<script src="../js/style.js"></script>
 
 <!-- responsive web -->
 <script>
@@ -83,7 +84,7 @@ $(document).ready(function() {
 
 <body>
 	<!-- Header -->
-	<div class="background-image"></div> <!-- dealing background image -->
+	<div class="background-image" id="background-image"></div> <!-- dealing background image -->
 	<div class = "container_all">
 		<header class = "header_container">
 			
@@ -105,7 +106,7 @@ $(document).ready(function() {
 			</div>
 			
 		</header>
-		<div class = "Header_nav_bar">
+		<div class = "Header_nav_bar" id = "Header_nav_bar">
 			<nav class="navbar navbar-default humans-navbar" role="navigation">
 				<!-- <div class="navbar-header">
 					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-01">
@@ -120,7 +121,7 @@ $(document).ready(function() {
 						<li><a href="#">AJOU</a></li>
 						<li><a href="#">EPILOGUE</a></li>
 					</ul>           
-					<form class="navbar-form navbar-right" action="#" role="search">
+					<!-- <form class="navbar-form navbar-right" action="#" role="search">
 						<div class="form-group">
 							<div class="input-group">
 								<input class="form-control" id="navbarInput-01" type="search" placeholder="Search">
@@ -129,7 +130,7 @@ $(document).ready(function() {
 								</span>            
 							</div>
 						</div>               
-					</form>
+					</form> -->
 				</div><!-- /.navbar-collapse -->
 			</nav><!-- /navbar -->
 		</div>
@@ -138,6 +139,8 @@ $(document).ready(function() {
 		<!-- Humans-Detail Content -->
 		<div class = "Detail_Container">
 
+			<div class ="Prev_Humans_detail">
+			</div>
 
 			<div class ="Humans_detail">
 				<!-- humans picture area -->
@@ -149,10 +152,12 @@ $(document).ready(function() {
 				<!-- text2(Q/A per month) area -->
 				<div class ="Humans_detail_text2_area">
 				</div>
-
 			</div>
-		</div>
-		<!-- /Humans-Detail Content -->
+			
+			<div class ="Next_Humans_detail">
+			</div>
+
+		</div><!-- /Humans-Detail Content -->
 		<!-- Footer -->
 		<!-- <footer id="footer">
 			<span>&copy; 2012 <a href="http://www.inwebson.com">HumansofAjouUniv.com</a>. Design by <a href="http://www.inwebson.com/contactus">BANGSUNGJU</a>. </span>

@@ -31,10 +31,11 @@ $(document).ready(function(){
 	
 });
 
-
+// navbar fixed by scroll
 $( window ).bind( 'scroll', function(){
   var srlTop  = $( this ).scrollTop();
-  if( srlTop > 710 )
+  var winHeight = $(window).height();
+  if( srlTop > winHeight-53)
   {
     $( '#Header_nav_bar' ).css({ position :'fixed', top : '0px' ,right:'0px' ,left:'0px'});
   }
