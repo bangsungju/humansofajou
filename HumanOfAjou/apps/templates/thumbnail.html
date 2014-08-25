@@ -89,12 +89,13 @@ $(document).ready(function() {
 	<!-- Header -->
 	<div class="background-image" id ="background-image"></div> <!-- dealing background image -->
 	<div class = "container_all">
+	
 		<header class = "Header_container">
 			
 			<div class="MainTitle">
 				<div class="Logo_area">
 					<div class="Logo_img">
-						<img src = "../static/images/4.png"/>
+						<img src = "../static/images/logo_complete.png"/>
 					</div>
 					<div class="FacebookLike">
 					</div>
@@ -109,114 +110,99 @@ $(document).ready(function() {
 			</div>
 			
 		</header>
-		<div class = "Header_nav_bar" id = "Header_nav_bar">
-			<nav class="navbar navbar-default  humans-navbar" role="navigation">
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-01">
-						<span class="sr-only">Toggle navigation</span>
-					</button>
-					<img src ="../static/images/humans_logo_ver.png" height="47px"/>
-				</div>
-				<div class="collapse navbar-collapse" id="navbar-collapse-01">
-					<ul class="nav navbar-nav">           
-						<li><a href="#">ABOUT US</a></li>
-						<li class="active"><a href="#">HUMANS</a></li>
-						<li><a href="#">AJOU</a></li>
-						<li><a href="#">EPILOGUE</a></li>
-					</ul>           
-					<form class="navbar-form navbar-right" action="#" role="search">
-						<div class="form-group">
-							<div class="input-group">
-								<input class="form-control" id="navbarInput-01" type="search" placeholder="Search">
-								<span class="input-group-btn">
-									<button type="submit" class="btn"><span class="fui-search"></span></button>
-								</span>            
+		<div class = "Header_nav_location">
+			<ul class="nav nav-pills" id ="Header_nav_bar">
+				<li class="active"><a href="#">About US</a></li>
+				<li><a href="#">HUMANS</a></li>
+				<li id="Header_distance_short"><a href="#">AJOU</a></li>
+				<li><a href="#">Epilogue</li></a>
+			</ul>
+		</div>
+
+		<div class = "Humans_white_container">
+			<!-- Content -->
+			<section id="wrapper">
+
+				<div class ="date_and_category">
+					<!-- THIS IS CATEGORY -->
+					<div class = "contents_category_bsj" >
+						<div class = "drop_box_location">
+
+							<div class="dropdown" id="contents_drop_down_position">
+								<button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Categorys<span class="caret"></span></button>
+								<span class="dropdown-arrow"></span>
+								<ul class="dropdown-menu">
+									<li><a href="#fakelink">Date Listed</a></li>
+									<li><a href="#fakelink">Thumnails</a></li>
+								</ul>
 							</div>
-						</div>               
-					</form>
-				</div><!-- /.navbar-collapse -->
-			</nav><!-- /navbar -->
-		</div>
-		<!--introducing ajou sec -->
-		
-		<!-- THIS IS CATEGORY -->
-		<div class = "contents_category_bsj" >
-			<div class = "drop_box_location">
 
-				<div class="dropdown" id="contents_drop_down_position">
-					<button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">Categorys<span class="caret"></span></button>
-					<span class="dropdown-arrow"></span>
-					<ul class="dropdown-menu">
-						<li><a href="#fakelink">Date Listed</a></li>
-						<li><a href="#fakelink">Thumnails</a></li>
-					</ul>
+						</div>
+					</div>
+					<!-- END CATEGORY -->
+					<div class = "date_humans">
+						<p> AUGUST 2014 </p>
+					</div>
 				</div>
-				
-			</div>
-		</div>
-		<!-- END CATEGORY -->
-		<!-- Content -->
-		<section id="wrapper">
+				<div id="container">
+					<div class="grid" id="thumnail_grid">
+						<div class="imgholder">
+							<img src="http://www.inwebson.com/demo/blocksit-js/demo2/images/img27.jpg" />
+						</div>
 
-			<div id="container">
-				<div class="grid" id="thumnail_grid">
-					<div class="imgholder">
-						<img src="http://www.inwebson.com/demo/blocksit-js/demo2/images/img27.jpg" />
 					</div>
+					<div class="grid" id="thumnail_grid">
+						<div class="imgholder">
+							<img src="http://www.inwebson.com/demo/blocksit-js/demo2/images/img26.jpg" />
+						</div>
 
-				</div>
-				<div class="grid" id="thumnail_grid">
-					<div class="imgholder">
-						<img src="http://www.inwebson.com/demo/blocksit-js/demo2/images/img26.jpg" />
 					</div>
-
-				</div>
-				<div class="grid" id="thumnail_grid">
-					<div class="imgholder">
-						<img src="http://www.inwebson.com/demo/blocksit-js/demo2/images/img15.jpg" />
+					<div class="grid" id="thumnail_grid">
+						<div class="imgholder">
+							<img src="http://www.inwebson.com/demo/blocksit-js/demo2/images/img15.jpg" />
+						</div>
 					</div>
-				</div>
-				<div class="grid" id="thumnail_grid">
-					<div class="imgholder">
-						<img src="http://www.inwebson.com/demo/blocksit-js/demo2/images/img23.jpg" />
+					<div class="grid" id="thumnail_grid">
+						<div class="imgholder">
+							<img src="http://www.inwebson.com/demo/blocksit-js/demo2/images/img23.jpg" />
+						</div>
 					</div>
-				</div>
-				<div class="grid" id="thumnail_grid">
-					<div class="imgholder">
-						<img src="http://www.inwebson.com/demo/blocksit-js/demo2/images/img17.jpg" />
+					<div class="grid" id="thumnail_grid">
+						<div class="imgholder">
+							<img src="http://www.inwebson.com/demo/blocksit-js/demo2/images/img17.jpg" />
+						</div>
 					</div>
-				</div>
-				<div class="grid" id="thumnail_grid">
-					<div class="imgholder">
-						<img src="http://www.inwebson.com/demo/blocksit-js/demo2/images/img22.jpg" />
+					<div class="grid" id="thumnail_grid">
+						<div class="imgholder">
+							<img src="http://www.inwebson.com/demo/blocksit-js/demo2/images/img22.jpg" />
+						</div>
 					</div>
-				</div>
-				<div class="grid" id="thumnail_grid">
-					<div class="imgholder">
-						<img src="http://www.inwebson.com/demo/blocksit-js/demo2/images/img16.jpg" />
+					<div class="grid" id="thumnail_grid">
+						<div class="imgholder">
+							<img src="http://www.inwebson.com/demo/blocksit-js/demo2/images/img16.jpg" />
+						</div>
 					</div>
-				</div>
-				<div class="grid" id="thumnail_grid">
-					<div class="imgholder">
-						<img src="http://www.inwebson.com/demo/blocksit-js/demo2/images/img21.jpg" />
+					<div class="grid" id="thumnail_grid">
+						<div class="imgholder">
+							<img src="http://www.inwebson.com/demo/blocksit-js/demo2/images/img21.jpg" />
+						</div>
 					</div>
-				</div>
-				<div class="grid" id="thumnail_grid">
-					<div class="imgholder">
-						<img src="http://www.inwebson.com/demo/blocksit-js/demo2/images/img28.jpg" />
+					<div class="grid" id="thumnail_grid">
+						<div class="imgholder">
+							<img src="http://www.inwebson.com/demo/blocksit-js/demo2/images/img28.jpg" />
+						</div>
 					</div>
-				</div>
-				<div class="grid" id="thumnail_grid">
-					<div class="imgholder">
-						<img src="http://www.inwebson.com/demo/blocksit-js/demo2/images/img2.jpg" />
+					<div class="grid" id="thumnail_grid">
+						<div class="imgholder">
+							<img src="http://www.inwebson.com/demo/blocksit-js/demo2/images/img2.jpg" />
+						</div>
 					</div>
-				</div>
-				<div class="grid" id="thumnail_grid">
-					<div class="imgholder">
-						<img src="http://www.inwebson.com/demo/blocksit-js/demo2/images/img24.jpg" />
+					<div class="grid" id="thumnail_grid">
+						<div class="imgholder">
+							<img src="http://www.inwebson.com/demo/blocksit-js/demo2/images/img24.jpg" />
+						</div>
 					</div>
 				</div>
-
 			</section>
 			<!-- Footer -->
 			<footer id="footer">
