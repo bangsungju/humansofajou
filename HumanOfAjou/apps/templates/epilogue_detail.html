@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>BlocksIt.js Demonstration #2 - Pinterest Dynamic Grid Layout with CSS3 Transitions</title>
+	<meta name="description" content="BlocksIt.js jQuery plugin Demonstration #2 Pinterest dynamic grid with CSS3 Transitions by inWebson.com"/>
+	<meta name="keywords" content="demonstration,demo,jquery,blocksit.js,css3,dynamic,grid,layout,inwebson"/>
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<!-- from this is Blocksit library -->
+	<!-- start with flat_UI -->
+	<script src="../js/jquery-ui.js"></script>
+	<!-- start with bootstrap -->
+	<script src="../js/bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="../static/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../static/css/flat-ui.css">
+
+<!--[if lt IE 9]>
+<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<script src="../static/js/blocksit.min.js"></script>
+<link rel='stylesheet' href='../static/css/style.css' media='screen' />
+
+<!-- responsive web -->
+<script>
+$(document).ready(function() {
+	//vendor script
+	$('#header')
+	.css({ 'top':-50 })
+	.delay(1000)
+	.animate({'top': 0}, 800);
+	
+	$('#footer')
+	.css({ 'bottom':-15 })
+	.delay(1000)
+	.animate({'bottom': 0}, 800);
+	
+	//blocksit define
+	$(window).load( function() {
+		$('#container').BlocksIt({
+			numOfCol: 3,
+			offsetX: 1,
+			offsetY: 8
+		});
+	});
+	
+	//window resize
+	var currentWidth = 1100;
+	$(window).resize(function() {
+		var winWidth = $(window).width();
+		var conWidth;
+		if(winWidth< 650){
+			conWidth = 300;
+			col=1
+		}
+		else if(winWidth < 1100) {
+			conWidth = 600;
+			col = 2
+		} else if(winWidth > 1100) {
+			conWidth = 1100;
+			col = 3
+		}
+		
+		if(conWidth != currentWidth) {
+			currentWidth = conWidth;
+			$('#container').width(conWidth);
+			$('#container').BlocksIt({
+				numOfCol: col,
+				offsetX: 1,
+				offsetY: 8
+			});
+		}
+	});
+});
+
+</script>
+<!-- responsive app end -->
+<link rel="shortcut icon" href="http://www.inwebson.com/wp-content/themes/inwebson2/favicon.ico" />
+<link rel="canonical" href="http://www.inwebson.com/demo/blocksit-js/demo2/" />
+</head>
+
+
+<body>
+	<!-- Header -->
+	<div class="background-image"></div> <!-- dealing background image -->
+	<div class = "container_all">
+		<header class = "header_container">
+			
+			<div class="MainTitle">
+				<div class="Logo_area">
+					<div class="Logo_img">
+						<img src = "../static/images/4.png"/>
+					</div>
+					<div class="FacebookLike">
+					</div>
+					<div class="FacebookLink">
+						<div class="Facebook_div">
+							<p class="LinkFacebook">FIND US IN FACEBOOK</p>
+						</div>
+
+					</div>
+				</div>
+
+			</div>
+			
+		</header>
+		<div class = "Header_nav_bar">
+			<nav class="navbar navbar-default" role="navigation">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-01">
+						<span class="sr-only">Toggle navigation</span>
+					</button>
+					<img src ="../static/images/humans_logo_ver.png" height="47px"/>
+				</div>
+				<div class="collapse navbar-collapse" id="navbar-collapse-01">
+					<ul class="nav navbar-nav">           
+						<li><a href="#">ABOUT US</a></li>
+						<li><a href="#">HUMANS</a></li>
+						<li><a href="#">AJOU</a></li>
+						<li class="active"><a href="#">EPILOGUE</a></li>
+					</ul>           
+					<form class="navbar-form navbar-right" action="#" role="search">
+						<div class="form-group">
+							<div class="input-group">
+								<input class="form-control" id="navbarInput-01" type="search" placeholder="Search">
+								<span class="input-group-btn">
+									<button type="submit" class="btn"><span class="fui-search"></span></button>
+								</span>            
+							</div>
+						</div>               
+					</form>
+				</div><!-- /.navbar-collapse -->
+			</nav><!-- /navbar -->
+		</div>
+		<div id="epilogue_detail">
+			<div class="epilogue_detail_title">
+				<h2 class="epilogue_detail_title_main">착한 투자, 나쁜 투기<h2>
+				<h4 class="epilogue_detail_title_sub">Investing, Seculating, Trading and Gambling<h2>
+			</div>
+			<div class="epilogue_detail_body">
+				시장참가자의 유형
+				<br>현대의 금융시장에서 투자와 투기의 구분이 모호해지고 있는 것은 사실이며 투자자가 투기를 병행하고 투기자가 투자를 병행하고 있는 것도 사실이다. 그러나 이러한 개념상의 모호성에 불구하고 우리는 분명히 시장참가의 유형과 그 개념을 정립해야할 필요가 있다. 시장참가의 유형은 투자(investment), 투기(speculation), 트레이딩(trading/dealing), 헤징(hedging) 및 도박(gam-bling)의 다섯가지로 나눌 수 있다. 이러한 유형은 시장에 참가하는 기간 즉 시간의 범위나 시장참가의 목적에 따라 구분된다. 시장참가자는 시장참가의 유형에 따라 그대로 분류된다. 즉 투자자(investor), 투기자(speculator), 트레이더(trader/dealer), 헤저(hedger) 및 도박군(gambler)이다.
+				<br>1.투자자
+				<br>투자자의 시간범위는 최소한 1년에서 2년 또는 그 이상인 장기간(long term)이다. 투자자가 시장에 참가하는 주된 목적은 현재와 미래에 소득(또는 수입)을 꾸준히 확보하는데 있다. 물론 그들은 부수적으로 자본이득(capital gain)도 기대하지만 시장의 단기적인 등락에는 구애를 받지 않고 현재 시장가격이 저평가되어 있는가 고평가되어 있는가를 분석하고 장기적인 전망을 밝히는데 주력한다.
+				<br>2. 투기자
+				<br>투기자의 시간범위는 짧게는 몇주에서 길게는 6개월 또는 1년에 이르는 중기(mid term)이다. 원래 투기란 “관찰(관측)하다(to observe).”라는 뜻의 “speculari”라는 라틴어에서 유래된 말이라고 한다. 이 어원에서 우리는 투기의 특성을 찾아낼 수 있다. 투기자는 시장을 계속 관찰하고 있다가 기회라고 생각되면 시장에 들어가는 것이며 목적은 자본이득이 전부이다. 따라서 투기자에게는 지적인 분석력과 인내심이 필요하다. 넬슨(Samuel Nelson)은 투기를 “계산에 근거한 과감한 모험(a venture based on calculation)”* 이라고 규정하였다.
+				<br>3. 트레이더
+				<br>트레이더는 시간범위가 짧게는 한나절에서 길어야 하루 또는 일주일 내외라는 것을 제외하고는 투기자와 같이 자본이득을 추구하는 시장참가자이다. 시간범위가 짧기 때문에 시장의 모든 움직임을 주시하여야 하며 의사결정의 빈도가 많기 때문에 그만큼 스트레스도 훨씬 커지게 된다.
+				<br>4. 헤저(hedger)
+				<br>헤지(hedge)란 원래 “울타리로 둘러싸다.”라는 뜻이며 도박에서는 “양쪽에 걸어서 손해를 방지한다.”는 뜻으로 사용되었고 최근에는 실물거래의 리스크를 파생상품거래를 통하여 제거하거나 상반된 시장행동으로 손익을 확정시키는 행위로 사용되게 되었다. 따라서 헤저란 엄밀한 의미의 리스크 회피행위와 투기에 따른 손익의 확정행위를 하는 자로 나눌 수 있겠다. 헤저는 우리의 논의의 대상과는 거리가 있으므로 이러한 개념 정립으로 가름하고자 한다.
+				<br>5. 도박꾼(Gambler)
+				<br>불행하게도 시장에는 도박을 하는 사람이 많다. 물론 투기와 도박이 동일시되는 경우도 있고 개념이 서로 뒤섞여 사용되는 경우도 있다.* 실제로 시장에서는 투기와 도박을 쉽게 구별할 수 없다. 그러나 시장의 노련한 브로커의 눈이라면 고객의 행위를 투기와 도박으로 구별하기는 그리 어렵지 않을 것이다. 넬슨 또한 투기가 지적인 노력이 수반되는 행위인데 반해 도박은 맹목적인 기회를 노리는 행위라고 하였으며 또한 도박을 “계산에 근거하지 않는 모험(a venture without calculation)”으로 규정한 바 있다. 그러면 시장에서 도박꾼은 구체적으로 투기자와 어떻게 구별되는가. 첫번째의 중요한 차이는 투기자가 시장을 관찰하고 분석하여 자기에게 유리한 시점을 택하는데 비하여 도박꾼은 아무때나 자기의 행운을 믿고 시험한다는 것이다. 두번째는 투기자가 자기의 때가 올때까지 오랫동안 인내하는데 비하여 도박꾼은 무의식적이며 습관적으로 계속 거는(베팅하는) 일종의 중독현상을 보인다는 것이다. 만약 누군가가 특별한 분석없이 최소한 자신이 판단하기로는 소위 감각에 의한 거래를 계속하고 있다고 치자. 나는 감각에 의한 시장행동이 행운을 믿고 베팅하는 도박과는 분명히 다르다는 것을 인정한다. 즉 시장에서의 트레이딩에 있어 감각이란 정확히 설명할 수 없다는 점만 다를 뿐 오랜 시장 경험에서 생긴 노하우이며 절대 무시할 수 없는 전략도구라고 생각한다. 그러나 그 사람이 하루라도 시장을 지켜보지 않으면 참을 수 없다거나 시장에서 잦은 트레이딩(거래)을 하면서도 수익을 올리기는 커녕 손실이 누적되고 있다면 과감히 거래를 중단하고 최소한 한달을 쉴 수 있는지의 여부가 아주 중요한 판단기준이 된다. 만약 쉴 수 있다면 그 사람은 트레이딩을 하고 있는 것이며 그의 트레이딩 도구인 감각이 빗나가고 있는 것이므로 다른 시장분석방법을 찾는 것이 필요하다. 만약 그 사람이 쉴 수 없다면 그는 감각에 의한 트레이딩을 하고 있는 것이 아니라 트레이딩을 빙자한 도박을 하고 있는 것으로 판단하는 것이 좋다. 어느 경우에건 도박은 비난받아 마땅하다면 투기는 칭송을 받지는 못할망정 위험을 감수하고 이익을 추구하는 사회적으로 뒷받침되어야할 행위라는 큰 차이점을 인식하자. **
+			</div>
+			<div class="epilogue_post_cards supplementalPostContent layoutSingleColumn">
+				<div class="epilogue_post_card_layout" id="epilogue_post_card_left">
+					<h4 class="epilogue_post_card_head">WRITTEN BY</h4>
+					<div class="epilogue_post_card_body">
+						<div class="card-imageWrapper"><img src="../static/images/thumb1.jpg" class="card_thumb"></div>
+						<div class="epilogue_post_card_content">
+							<h3 class="epilogue_post_card_name">SimheeTwice</h3>
+							<p class="epilogue_post_card-description">수탉처럼 살고 싶은 시니어 / 英,獨,日 리서치 노동자 / 지붕 위에서 바람의 방향을 살피다 가끔씩 내려와 쪼기</p>
+						</div>
+					</div>
+				</div>
+				<div class="epilogue_post_card_layout" id="epilogue_post_card_right">
+					<h4 class="epilogue_post_card_head">PUBLISHED IN</h4>
+					<div class="epilogue_post_card_body">
+						<div class="card-imageWrapper"><img src="../static/images/1.png" class="card_thumb"></div>
+						<div class="epilogue_post_card_content">
+							<h3 class="epilogue_post_card_name">Humans of Ajou</h3>
+							<p class="epilogue_post_card-description">Humans of Ajou / 아주인들의 소소한 일상들을 확인해보세요.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		<!-- Footer -->
+		<footer id="footer">
+			<span>&copy; 2012 <a href="http://www.inwebson.com">HumansofAjouUniv.com</a>. Design by <a href="http://www.inwebson.com/contactus">BANGSUNGJU</a>. </span>
+		</footer>
+	</div>
+</body>
+</html>

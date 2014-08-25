@@ -1,0 +1,59 @@
+
+.Prev_detail{
+	top : 350px;
+	float: left;
+	width: 100px;
+	height: 100px;
+	/*border: solid red;*/
+	text-align: center;
+
+}
+.Next_detail{
+	top : 350px;
+	float: right;
+	width: 100px;
+	height: 100px;
+	/*border: solid red;*/
+	text-align: center;
+}
+
+.Ajou_glyphicon{
+	font-size: 30px;
+	color: white;
+}
+.Detail_Container{
+	margin : 0 auto;
+	width: 60%;
+	height: auto;
+	/*border: solid;*/
+	background-color: rgba(255,255,255,0.8);
+	padding-top: 100px;
+
+}
+
+.Ajou_detail_img_area{
+	/*border: solid;*/
+	padding: auto;
+	height: auto;
+
+}
+
+.Ajou_detail_img{
+	position: relative;
+	max-width: 100%;
+	max-height: 90vh;
+}
+
+.Ajou_detail_text1_area{
+
+	height: auto;
+	font-size: 13px;
+	padding: 20px 15px;
+	text-align: right;
+
+
+}
+
+.Detail_img_modal{
+	width: 100%;
+}

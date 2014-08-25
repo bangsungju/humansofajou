@@ -1,0 +1,90 @@
+
+.Prev_detail{
+	top : 350px;
+	float: left;
+	width: 100px;
+	height: 100px;
+	/*border: solid red;*/
+	text-align: center;
+
+}
+.Next_detail{
+	top : 350px;
+	float: right;
+	width: 100px;
+	height: 100px;
+	/*border: solid red;*/
+	text-align: center;
+}
+
+.humans_glyphicon{
+	font-size: 30px;
+	color: white;
+}
+.Detail_Container{
+	margin : 0 auto;
+	width: 50%;
+	height: auto;
+	/*border: solid;*/
+	background-color: rgba(255,255,255,0.8);
+	padding-top: 53px;
+	padding-bottom: 53px;
+
+}
+
+
+.Humans_detail{
+	/*border: solid;*/
+
+}
+
+.Humans_detail_img_area{
+
+	/*border: solid;*/
+	height: auto;
+
+}
+
+.Humans_detail_img{
+	position: relative;
+	max-width: 100%;
+}
+
+.Humans_detail_text1_area{
+	
+	/*border: solid;*/
+	height: auto;
+	font-size: 13px;
+	padding: 25px 15px;
+
+
+}
+
+.Humans_detail_text2_area{
+	
+	/*border: 1px solid;*/
+	height: auto;
+	font-size: 12px;
+	padding: 15px;
+	background-color: rgba(100,100,100,0.8);
+	color: white;
+
+
+}
+
+.Humans_detail_button_area{
+	background-color: rgba(100,100,100,0.8);
+	/*border: solid;*/
+	height: 80px;
+
+}
+
+.btn-month-question{
+	float: right;
+	margin: 10px 20px;
+	border-bottom: solid;
+}
+
+.Detail_img_modal{
+	width: 100%;
+}
