@@ -339,7 +339,8 @@ width: 100%;
 	width:1100px;
 	margin:0 auto 25px;
 	padding-bottom: 10px;
-	background-color: white;
+	/*background-color: rgba(0,0,0,0.5);*/
+	background-color: rgba(255,255,255,0.8);
 }
 .epilogue_title{
 	width: 100%;
@@ -351,7 +352,7 @@ width: 100%;
 .epilogue_board{
 	width: 95%;
 	height: 120px;
-	margin:0 auto 25px;
+	margin: 0px auto;
 	border-bottom: 1px solid #bcbcbc;
 }
 .report_date{
@@ -398,12 +399,13 @@ width: 100%;
 	font-weight: bolder;
 }
 
+
 /* EPILOGUE DETAIL */
-#epilogue_detail{
+.epilogue_detail{
 	position:relative;
 	width:1100px;
 	margin:0 auto 25px;
-	padding-bottom: 150px;
+
 	background-color: white;
 	font-family: "freight-text-pro",Georgia,Cambria,"Times New Roman",Times,serif;
 	letter-spacing: 0.01rem;
@@ -439,11 +441,12 @@ width: 100%;
 }
 .epilogue_post_cards{
 	opacity: 1;
-	width: 50%;
+	width: auto;
+	height: auto;
 	margin: 0 auto 25px;
 	margin-bottom: 100px;
-	padding-top: 30px;
-	padding-bottom: 30px;
+	padding-top: 20px;
+	padding-bottom: 60px;
 	text-align: left;
 	position: relative;
 	right: 0%;
@@ -475,10 +478,10 @@ width: 100%;
 	position: relative;
 }
 #epilogue_post_card_left{
-	float: left;
+	/*float: left;*/
 }
 #epilogue_post_card_right{
-	float: right;
+	/*float: right;*/
 }
 .epilogue_post_card_head{
 	margin-right: 20px;

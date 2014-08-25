@@ -108,10 +108,10 @@ $(document).ready(function() {
 		</header>
 		<div class = "Header_nav_location">
 			<ul class="nav nav-pills" id ="Header_nav_bar">
-			  <li class="active"><a href="#">About US</a></li>
-			  <li><a href="#">HUMANS</a></li>
-			  <li id="Header_distance_short"><a href="#">AJOU</a></li>
-			  <li><a href="#">Epilogue</li></a>
+			    <li{% if active_tab == 'aboutus_tab' %} class="active"{% endif %}><a href="{{ url_for('aboutUs') }}">ABOUT US</a></li>
+                <li{% if active_tab == 'humans_tab' %} class="active"{% endif %}><a href="{{ url_for('humans_list') }}">HUMANS</a></li>
+                <li{% if active_tab == 'ajou_tab' %} class="active"{% endif %}><a href="{{ url_for('ajou_list') }}">AJOU</a></li>
+                <li{% if active_tab == 'epilogue_tab' %} class="active"{% endif %}><a href="{{ url_for('epilogue') }}">EPILOGUE</a></li>
 			</ul>
 		</div>
 		<!-- Content -->
