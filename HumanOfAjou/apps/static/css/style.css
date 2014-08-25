@@ -172,7 +172,7 @@ a:hover, a:active{
   z-index: -9999;
   
   display: block;
-  background: url('../images/header_image.jpg') no-repeat center center fixed;
+  background: url('../images/library.jpeg') no-repeat center center fixed;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
@@ -185,9 +185,16 @@ a:hover, a:active{
 	height:707px;
 }
 /*Nav_bar*/
+.Header_nav_location{
+	width:400px;
+	margin:auto;
+}
 #Header_nav_bar{
 	z-index:99;
+	text-align:center;
+	color:white;
 }
+
 /*Nav-bar-end*/
 
 /*BACK GROUND IMAGE END*/
@@ -204,7 +211,7 @@ a:hover, a:active{
 	width: 375px;
 }
 .Logo_img{
-	height:375px;
+	height:400px;
 	margin-right: auto;
 	margin-left:auto;
 	padding-top: 5%;
@@ -254,11 +261,29 @@ a:hover, a:active{
 margin-top: 5px;
 width: 100%;
 }
-.date_uploaded{
-	padding-left:30px;
-	padding-bottom:10px;
+.date_and_category{
+	padding-bottom:60px;
+	height:130px;
+	position:relative;
+	margin-bottom: 50px;
 }
 
+.date_humans{
+	margin-top:45px;
+	padding-top:10px;
+	width:96%;
+	float:left;
+	border-top: 1px solid white;
+	border-left: 1px solid white;
+	border-top-left-radius: 8px;
+	padding-left:30px;
+	
+
+}
+.date_humans p{
+	font-color:white;
+	color:white;
+}
 /*HEADER 끝*/
 /*BODY 시작*/
 /*THIS IS PICTURE*/
@@ -291,7 +316,8 @@ width: 100%;
 }
 /*THIS IS CATEGORY*/
 .contents_category_bsj{
-	height: 60px;
+	
+	float:right;
 
 }
 .drop_box_location{
@@ -515,6 +541,16 @@ width: 100%;
 	font-size: 14px;
 	line-height: 1.3;
 	margin-bottom: 4px;
+}
+/* White container body */
+.Humans_white_container{
+	width:81%;
+	
+	margin-right:auto;
+	margin-left:auto;
+	padding-top:80px;
+	padding-bottom:50px;
+/*	background-color:white;*/
 }
 /*UPLOAD FORM*/
 .upload_form{
