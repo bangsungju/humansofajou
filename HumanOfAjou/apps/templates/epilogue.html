@@ -10,6 +10,8 @@
 	<!-- from this is Blocksit library -->
 	<!-- start with flat_UI -->
 	<script src="../js/jquery-ui.js"></script>
+	<script src="../static/js/style.js"></script>
+
 	<!-- start with bootstrap -->
 	<script src="../js/bootstrap.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="../static/css/bootstrap.min.css">
@@ -82,14 +84,14 @@ $(document).ready(function() {
 
 <body>
 	<!-- Header -->
-	<div class="background-image"></div> <!-- dealing background image -->
+	<div class="background-image" id ="background-image"></div> <!-- dealing background image -->
 	<div class = "container_all">
-		<header class = "header_container">
+		<header class = "Header_container">
 			
 			<div class="MainTitle">
 				<div class="Logo_area">
 					<div class="Logo_img">
-						<img src = "../static/images/4.png"/>
+						<img src = "../static/images/logo_complete.png"/>
 					</div>
 					<div class="FacebookLike">
 					</div>
@@ -104,34 +106,18 @@ $(document).ready(function() {
 			</div>
 			
 		</header>
-		<div class = "Header_nav_bar">
-			<nav class="navbar navbar-default" role="navigation">
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-01">
-						<span class="sr-only">Toggle navigation</span>
-					</button>
-					<img src ="../static/images/humans_logo_ver.png" height="47px"/>
-				</div>
-				<div class="collapse navbar-collapse" id="navbar-collapse-01">
-					<ul class="nav navbar-nav">           
-						<li><a href="#">ABOUT US</a></li>
-						<li><a href="#">HUMANS</a></li>
-						<li><a href="#">AJOU</a></li>
-						<li class="active"><a href="#">EPILOGUE</a></li>
-					</ul>           
-					<form class="navbar-form navbar-right" action="#" role="search">
-						<div class="form-group">
-							<div class="input-group">
-								<input class="form-control" id="navbarInput-01" type="search" placeholder="Search">
-								<span class="input-group-btn">
-									<button type="submit" class="btn"><span class="fui-search"></span></button>
-								</span>            
-							</div>
-						</div>               
-					</form>
-				</div><!-- /.navbar-collapse -->
-			</nav><!-- /navbar -->
+		<div class = "Header_nav_location">
+			<ul class="nav nav-pills" id ="Header_nav_bar">
+			  <li class="active"><a href="#">About US</a></li>
+			  <li><a href="#">HUMANS</a></li>
+			  <li id="Header_distance_short"><a href="#">AJOU</a></li>
+			  <li><a href="#">Epilogue</li></a>
+			</ul>
 		</div>
+
+		<!-- THIS IS BLANK -->
+		<div class= "Header_blank_human"></div>
+		
 		<div id="epilogue_list">
 			<div class="epilogue_title"> EPILOGUE</div>
 			<div class="epilogue_board">
