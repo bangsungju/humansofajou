@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>BlocksIt.js Demonstration #2 - Pinterest Dynamic Grid Layout with CSS3 Transitions</title>
+	<title>HOA :: Ajou Section</title>
 	<meta name="description" content="BlocksIt.js jQuery plugin Demonstration #2 Pinterest dynamic grid with CSS3 Transitions by inWebson.com"/>
 	<meta name="keywords" content="demonstration,demo,jquery,blocksit.js,css3,dynamic,grid,layout,inwebson"/>
 
@@ -88,11 +88,14 @@ $(document).ready(function() {
 
 <body>
 	<!-- Header -->
-	<div class="background-image" id ="background-image"></div> <!-- dealing background image -->
+
+	<!-- dealing background images -->
+	<div class="img-src" id="bg"> </div>
+	<div class="img-src blurred-img" id="bg-blur"> </div>
+	<!-- container start -->
 	<div class = "container_all">
-	
-		<header class = "Header_container">
-			
+
+		<header class = "Header_container">			
 			<div class="MainTitle">
 				<div class="Logo_area">
 					<div class="Logo_img">
@@ -107,10 +110,9 @@ $(document).ready(function() {
 
 					</div>
 				</div>
-
-			</div>
-			
+			</div>			
 		</header>
+
 		<div class = "Header_nav_location">
 			<ul class="nav nav-pills" id ="Header_nav_bar">
 				<li class="active"><a href="#">About US</a></li>
@@ -120,7 +122,10 @@ $(document).ready(function() {
 			</ul>
 		</div>
 
-		<div class = "Humans_white_container">
+		<!-- THIS IS BLANK -->
+		<div class= "Header_blank_human"></div>
+
+		<div class = "Humans_black_container">
 			<!-- Content -->
 			<section id="wrapper">
 
@@ -149,8 +154,8 @@ $(document).ready(function() {
 					<div class="grid" id="thumnail_grid">
 						<div class="imgholder">
 							<div class ="Humans_detail_img">
-						<img class ="Humans_detail_img" data-toggle="modal" data-target=".human-modal" src="../static/images/img1.jpg" />
-					</div>		
+								<img class ="Humans_detail_img" data-toggle="modal" data-target=".human-modal" src="../static/images/img1.jpg" />
+							</div>		
 						</div>
 
 					</div>
@@ -158,7 +163,6 @@ $(document).ready(function() {
 						<div class="imgholder">
 							<img src="http://www.inwebson.com/demo/blocksit-js/demo2/images/img26.jpg" />
 						</div>
-
 					</div>
 					<div class="grid" id="thumnail_grid">
 						<div class="imgholder">
@@ -207,6 +211,7 @@ $(document).ready(function() {
 					</div>
 				</div>
 			</section>
+
 			<!-- Footer -->
 			<footer id="footer">
 				<span>&copy; 2012 <a href="http://www.inwebson.com">HumansofAjouUniv.com</a>. Design by <a href="http://www.inwebson.com/contactus">BANGSUNGJU</a>. </span>
